@@ -162,6 +162,14 @@ def game_scene():
         16,
     )
 
+    # create list of lasers for when we shoot
+    lasers = []
+    for laser_numer in range(constants.TOTAL_NUMBER_OF_LASERS):
+        a_single_laser = stage.Sprite(image_bank_sprites.10,
+                                      constants.OFF_SCREEN_X,
+                                      constants.OFF_SCREEN_Y)
+        lasers.append(a_single_laser)
+
     # Create a stage for the background to show up on
     #   and set the frame rate to 60fps
     game = stage.Stage(ugame.display, 60)
